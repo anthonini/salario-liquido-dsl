@@ -1,0 +1,13 @@
+grammar br.ufrn.ppgti.ppgti1007.SalarioLiquido with org.eclipse.xtext.common.Terminals
+
+generate salarioLiquido "http://www.ufrn.br/ppgti/ppgti1007/SalarioLiquido"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Salarios:
+	salarios += Salario*;
+	
+Salario:
+	'Salario' valor=Double ('Dependentes' dependentes=INT)? ('Descontos' descontos=Double)? ('Previdencia' previdencia=Double)?;
+	
+Double returns ecore::EDouble : INT ('.' INT)?;

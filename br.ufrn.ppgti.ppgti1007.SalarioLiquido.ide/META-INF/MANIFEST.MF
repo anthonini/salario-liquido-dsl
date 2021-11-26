@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: br.ufrn.ppgti.ppgti1007.SalarioLiquido.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: br.ufrn.ppgti.ppgti1007.SalarioLiquido.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: br.ufrn.ppgti.ppgti1007.SalarioLiquido.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: br.ufrn.ppgti.ppgti1007.SalarioLiquido,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: br.ufrn.ppgti.ppgti1007.ide.contentassist.antlr,
+ br.ufrn.ppgti.ppgti1007.ide.contentassist.antlr.internal

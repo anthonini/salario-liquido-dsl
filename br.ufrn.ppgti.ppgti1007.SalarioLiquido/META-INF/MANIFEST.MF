@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: br.ufrn.ppgti.ppgti1007.SalarioLiquido
+Bundle-ManifestVersion: 2
+Bundle-Name: br.ufrn.ppgti.ppgti1007.SalarioLiquido
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: br.ufrn.ppgti.ppgti1007.SalarioLiquido; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: br.ufrn.ppgti.ppgti1007,
+ br.ufrn.ppgti.ppgti1007.validation,
+ br.ufrn.ppgti.ppgti1007.scoping,
+ br.ufrn.ppgti.ppgti1007.salarioLiquido.util,
+ br.ufrn.ppgti.ppgti1007.salarioLiquido,
+ br.ufrn.ppgti.ppgti1007.parser.antlr.internal,
+ br.ufrn.ppgti.ppgti1007.serializer,
+ br.ufrn.ppgti.ppgti1007.parser.antlr,
+ br.ufrn.ppgti.ppgti1007.generator,
+ br.ufrn.ppgti.ppgti1007.services,
+ br.ufrn.ppgti.ppgti1007.salarioLiquido.impl
+Import-Package: org.apache.log4j
