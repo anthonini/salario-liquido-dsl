@@ -17,12 +17,12 @@ public class DadosSalario {
 		
 	public DadosSalario(Salario salario) {
 		this.salario = salario;		
-		calcular();
+		calcularSalarioLiquido();
 		calcularDecimoTerceiro();
 		calcularFerias();
 	}
 
-	private void calcular() {
+	private void calcularSalarioLiquido() {
 		Tabela tabelaINSS = new TabelaINSS();
 		inss = tabelaINSS.getValor(salario.getValor());
 		
@@ -34,12 +34,12 @@ public class DadosSalario {
 	
 	private void calcularDecimoTerceiro() {
 		Tabela tabelaINSS = new TabelaINSS();
-		inss = tabelaINSS.getValor(salario.getValor());
+		double inssDecimoTerceiro = tabelaINSS.getValor(salario.getValor());
 		
 		Tabela tabelaIRRF = new TabelaIRRF();
-		irrf = tabelaIRRF.getValor(salario.getValor() - inss - salario.getDependentes()*TabelaIRRF.DEDUCAO_DEPENDENTE);
+		double irrfDecimoTerceiro = tabelaIRRF.getValor(salario.getValor() - inssDecimoTerceiro - salario.getDependentes()*TabelaIRRF.DEDUCAO_DEPENDENTE);
 		
-		decimoTerceiro = salario.getValor() - inss - irrf;
+		decimoTerceiro = salario.getValor() - inssDecimoTerceiro - irrfDecimoTerceiro;
 	}
 	
 	private void calcularFerias() {

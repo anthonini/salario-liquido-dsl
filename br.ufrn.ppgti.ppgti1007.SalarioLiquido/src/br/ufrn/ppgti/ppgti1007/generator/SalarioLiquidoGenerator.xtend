@@ -59,14 +59,14 @@ class SalarioLiquidoGenerator extends AbstractGenerator {
 	 								<thead>
 	 									<tr>
 	 										<th>Salário</th>
+	 										<th>Dependentes</th>
 	 										<th>INSS</th>
 	 										<th>IRRF</th>
-	 										<th>Dependentes</th>
 	 										<th>Descontos</th>
 	 										<th>Previdência</th>
 	 										<th>1/3 Férias</th>
-	 										<th>13º Salário</th>
 	 										<th>Férias</th>
+	 										<th>13º Salário</th>
 	 										<th>Líquido</th>
 	 										<th>Líquido + 13º e Férias</th>
 	 										<th>FGTS</th>
@@ -82,8 +82,8 @@ class SalarioLiquidoGenerator extends AbstractGenerator {
 	 										<td>«dados.descontos»</td>
 	 										<td>«dados.previdencia»</td>
 	 										<td>«dados.tercoFerias»</td>
-	 										<td>«dados.decimoTerceiro»</td>
 	 										<td>«dados.ferias»</td>
+	 										<td>«dados.decimoTerceiro»</td>
 	 										<td>«dados.salarioLiquido»</td>
 	 										<td>«dados.salarioLiquidoMais13Ferias»</td>
 	 										<td>«dados.FGTS»</td>
